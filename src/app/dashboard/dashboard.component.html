@@ -1,0 +1,55 @@
+
+<app-deleteconfirm [item]="cno"></app-deleteconfirm>
+<div class="text-end  mt-5 p-2 me-3">
+    <button class="btn btn-success" (click)="logout()">Logout</button><br>
+    </div>
+    <div class="text-end p-2 me-3">
+
+        <button type="button" class="btn  btn-danger"  (click)="deleteconfirm()">Delete</button>
+    
+    </div>
+
+
+<div class="text-white container  ps-5 pe-5 ms-5 "><h1>Welcome  {{user}} !!</h1></div>
+<div class="ps-5 pe-5 ms-5">
+    <a routerLink="/transaction"> view transaction history</a></div>
+<div class="container w-50 mt-5" style="background-color: rgba(0,0,0,0.5); border-radius: 15px;">
+    <h1 class="text-center text-light"> Deposit</h1>
+     <form (ngSubmit)="deposit()">
+            <div class="p-2 ">
+                
+                <input name="acnumber" type="text" placeholder="Enter your Account number" [(ngModel)]="acnum" id="acnoo" class="form-control">
+            </div>
+            <div class="p-2 ">
+                
+                <input name="password" type="password" placeholder="Enter password" [(ngModel)]="pswrd" id="passss" class="form-control">
+            </div>
+            <div class="mt-3 p-2">
+                
+                <input name="amount" type="text" placeholder="Enter Amount" [(ngModel)]="amnt" id="amnt" class="form-control">
+            </div>
+            <div class=" mt-3 p-2">
+                <button type="submit" class="btn btn-dark rounded-sm">Deposit</button>
+            </div>
+     </form>
+</div>
+<div class="container w-50 mt-5" style="background-color: rgba(0,0,0,0.5); border-radius: 15px;">
+    <h1 class="text-center text-light">Withdraw</h1>
+     <form (ngSubmit)="withdraw()">
+            <div class="p-2 ">
+                
+                <input name="acnumber1" type="text" placeholder="Enter your Account number" [(ngModel)]="acnum1" id="acnooo" class="form-control">
+            </div>
+            <div class="p-2 ">
+                
+                <input name="password1" type="password" placeholder="Enter password" [(ngModel)]="pswrd1" id="passsss" class="form-control">
+            </div>
+            <div class="mt-3 p-2">
+                
+                <input name="amount1" type="text" placeholder="Enter Amount" [(ngModel)]="amnt1" id="amntt" class="form-control">
+            </div>
+            <div class=" mt-3 p-2">
+                <button type="submit" class="btn btn-dark rounded-sm">Withdraw</button>
+            </div>
+     </form>
+</div>

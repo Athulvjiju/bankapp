@@ -1,0 +1,29 @@
+<div class="text-black text-center ms-5 p-3"><h2>{{aim}}</h2></div>
+    <div class="container w-50 border mt-5 p-3 " style="background:rgb(0,0,0,0.5) ;border-radius: 15px"> <br>
+<h1 class="text-center text-white">Login Page</h1>
+<form (ngSubmit)="login()" [formGroup]="loginForm" >
+    <div class="p-2 mt-2">
+    <input name="acno" id="acid" type="text" [placeholder]="acnt" formControlName="acno" class="form-control" id="acid">
+</div>
+
+<div *ngIf="this.loginForm.get('acno')?.errors&&this.loginForm.get('acno')?.touched" class="text-danger"><p>invalid account number</p></div>
+
+
+
+
+<div class="p-2 mt-2">
+    <input name="psw" id="pid" type="password" placeholder="Password" formControlName="psw"   class="form-control" id="pid">
+    
+</div> <br>
+
+<div *ngIf="this.loginForm.get('psw')?.errors&&this.loginForm.get('psw')?.touched" class="text-danger"><p>invalid password</p></div>
+
+
+
+<div class="p-2 mt-2">
+    <button  id="bt" type="submit"  class="btn btn-dark">SIGN IN</button>  <br> <br>
+</div>
+<h5 class="text-light" id="aa">Don't have an account?     <a  href="" onclick="" routerLink="register" style="text-decoration: none;" class="text-info">Create</a> </h5>
+</form>
+
+</div>

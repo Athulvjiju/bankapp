@@ -1,0 +1,39 @@
+<div class="container w-50 mt-5 p-3" style="background:rgb(0,0,0,0.5) ; border-radius:15px"> <br>
+    <h1 class="text-center text-white">Register</h1>
+<form (ngSubmit)="register()" [formGroup]="registerForm">
+    <div class="p-2 mt-2">
+        <input name="username"  type="text" placeholder="Enter user name" formControlName="uname" class="form-control" id="uname">
+    </div>
+<!-- *ngif -->
+<div *ngIf="this.registerForm.get('uname')?.errors&&this.registerForm.get('uname')?.touched" class="text-danger"><p>invalid username</p></div>
+   
+   <br>
+    <div class="p-2 mt-2">
+        <input name="acnum" id="pid" type="text" placeholder="Enter acno" formControlName="acno"   class="form-control" id="acno">
+        
+    </div>
+    
+    <div *ngIf="this.registerForm.get('acno')?.errors&&this.registerForm.get('acno')?.touched" class="text-danger"><p>invalid account number</p></div>
+
+    
+    
+    
+    <br>
+    <div class="p-2 mt-2">
+        <input name="psw" id="pid" type="text" placeholder="Enter password" formControlName="pswd"   class="form-control" id="pswd">
+        
+    </div> 
+    
+    <div *ngIf="this.registerForm.get('pswd')?.errors&&this.registerForm.get('pswd')?.touched" class="text-danger"><p>invalid password</p></div>
+
+    
+    
+    
+    <br>
+    <div class="p-2 mt-2">
+        <button  id="bt" type="submit"  class="btn btn-dark">REGISTER</button>  <br> <br>
+    </div>
+</form>
+    <!-- <h5 class="text-white" id="aa">Don't have an account?     <a  href="" onclick="" routerLink="register" style="text-decoration: none;" class="text-info">Create</a> </h5> -->
+    
+    </div>

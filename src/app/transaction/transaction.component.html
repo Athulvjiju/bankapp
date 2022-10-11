@@ -1,0 +1,24 @@
+<!-- table -->
+
+<!-- transaction history -->
+
+<div class="container w-50">
+  <h1 class="text-darktext center">Transaction History</h1>
+  <table class="border border-dark w-50 container text-dark">
+      <thead>
+          <tr class="border border-dark">
+              <td class="border border-dark">Type</td>
+              <td class="border border-dark">Amount</td>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let i of transaction" class="border border-dark">
+              <td class="border border-dark">{{i.type}}</td>
+              <td class="border border-dark">{{i.amount}}</td>
+
+          </tr>
+       </tbody>
+  </table>
+
+  <a routerLink="/dashboard">Home</a>
+</div>
